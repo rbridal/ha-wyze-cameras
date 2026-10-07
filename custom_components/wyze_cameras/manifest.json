@@ -1,0 +1,18 @@
+{
+  "domain": "wyze_cameras",
+  "name": "Wyze Cameras",
+  "codeowners": [
+    "@rbridal"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/rbridal/ha-wyze-cameras",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/rbridal/ha-wyze-cameras/issues",
+  "loggers": [
+    "custom_components.wyze_cameras"
+  ],
+  "requirements": [],
+  "version": "0.1.0"
+}

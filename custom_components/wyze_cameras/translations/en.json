@@ -1,0 +1,97 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Wyze account",
+        "description": "Cameras only: power and siren. Create an API key ID and API key at developer-api-console.wyze.com.",
+        "data": {
+          "email": "Email",
+          "password": "Password",
+          "key_id": "API key ID",
+          "api_key": "API key"
+        },
+        "data_description": {
+          "password": "Hashed before it is stored; the plain password is never saved."
+        }
+      },
+      "verify": {
+        "title": "Two-factor verification",
+        "description": "Enter the code from your {method}.",
+        "data": {
+          "code": "Verification code"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Log in to Wyze again",
+        "description": "Wyze rejected the stored login for {email}. Enter the password and API key again.",
+        "data": {
+          "password": "Password",
+          "key_id": "API key ID",
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Wyze rejected the email, password, or API key.",
+      "invalid_code": "Wyze rejected the verification code.",
+      "cannot_connect": "Could not reach Wyze.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This Wyze account is already set up.",
+      "reauth_successful": "Logged in again."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optimistic state",
+        "description": "Off by default. A selected camera shows the commanded power/siren state immediately, before Wyze confirms it; after 60 s without confirmation it reverts to the reported state with a warning. Leave security cameras unselected.",
+        "data": {
+          "optimistic_cameras": "Cameras with optimistic state"
+        }
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "power": {
+        "name": "Power"
+      }
+    },
+    "siren": {
+      "siren": {
+        "name": "Siren"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      }
+    },
+    "sensor": {
+      "camera_response_time": {
+        "name": "API response time"
+      },
+      "last_command_result": {
+        "name": "Last command result",
+        "state": {
+          "confirmed": "Confirmed",
+          "timeout": "Timed out",
+          "failed": "Failed",
+          "offline": "Offline",
+          "superseded": "Superseded"
+        }
+      },
+      "last_api_response_time": {
+        "name": "Last API response time"
+      },
+      "average_api_response_time": {
+        "name": "Average API response time"
+      },
+      "api_requests_today": {
+        "name": "API requests today"
+      }
+    }
+  }
+}

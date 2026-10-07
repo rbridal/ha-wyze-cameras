@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "switch": {
+      "power": {
+        "default": "mdi:cctv",
+        "state": {
+          "off": "mdi:cctv-off"
+        }
+      }
+    },
+    "sensor": {
+      "camera_response_time": {
+        "default": "mdi:timer-outline"
+      },
+      "last_command_result": {
+        "default": "mdi:check-network-outline"
+      },
+      "last_api_response_time": {
+        "default": "mdi:timer-outline"
+      },
+      "average_api_response_time": {
+        "default": "mdi:timer-sand"
+      },
+      "api_requests_today": {
+        "default": "mdi:counter"
+      }
+    }
+  }
+}
